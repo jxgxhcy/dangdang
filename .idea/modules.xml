@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/basket.iml" filepath="$PROJECT_DIR$/.idea/basket.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dangdang/.idea/dangdang.iml" filepath="$PROJECT_DIR$/../dangdang/.idea/dangdang.iml" />
     </modules>
   </component>
 </project>
