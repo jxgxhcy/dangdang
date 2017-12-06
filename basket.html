@@ -1,14 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us" class="no-js">
 <head>
-    <meta charset="UTF-8">
+    <!-- 编码信息 -->
+    <meta charset="utf-8">
+    <!-- 使用最新版的ie 浏览器，或者chrome-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <!-- 让布局在移动浏览器上显示的更好 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport 的浏览器，比如黑莓 -->
+    <meta name="HandheldFriendly" content="true">
+
     <title>购物车</title>
-    <link rel="stylesheet" type="text/css" href="css/lib.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="css/lib.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <div class="container">
-
+    <!-- 头部 -->
+    <div class="header-wrapper">
+        <div class="header w960 tdn">
+            &nbsp;&nbsp;欢迎光临当当，请<a href="#lg" style="color: #ff0000">登录</a> <a href="#re">成为会员</a>
+            <div class="nav dib">
+                <a class="dib" href="#">购物车</a>
+                <a class="dib" href="#">我的订单</a>
+                <a class="dib" href="#">我的云书房</a>
+                <a class="dib" href="#">我的当当</a>
+                <a class="dib" href="#">小说投稿</a>
+                <a class="dib" href="#">企业采购</a>
+                <a class="dib" href="#">客户服务</a>
+            </div>
+        </div>
     </div>
+    <div class="banner w960">
+        <a href="#">
+            <img src="./images/guanggao.jpg" alt="ad">
+        </a>
+    </div>
+    <div class="logo-wrapper">
+        <div class="logo w960">
+            <a class="ml15" href="#">
+                <img src="./images/logo.jpg" alt="logo">
+            </a>
+            <img class="step" src="./images/buzou.png" alt="step">
+        </div>
+    </div>
+    <div class="adr-wrapper">
+        <div class="w960">
+            <img class="adr" src="./images/peisong.png" alt="配送">
+        </div>
+    </div>
+    <div class="login-tip w960">
+        <span class="icon"></span>
+        您还没有登录！登录后购物车的商品将保存到您的帐号中
+        <a class="btn" href="#">立即登录</a>
+    </div>
+    <!-- 购物车 -->
+    <div class="total-wrapper">
+        <div class="total w960">
+            <div class="total-left">
+                <a class="check-now" href="#"></a>全选
+                <a class="ml15" href="#">批量删除</a>
+                <span class="ml50">已选择<span id="select-count" class="cf00">3</span>件商品</span>
+            </div>
+            <div class="total-right">
+                <div class="dib lh24 vm">
+                    <span class="w150 dib">总计(不含运费):</span><span class="w50 dib cf00">¥0.00</span><br/>
+                    <span class="w150 dib">已节省:</span><span class="w50 dib cf00">¥0.00</span>
+                </div>
+                <a class="btn-large" href="#">结算</a>
+            </div>
+        </div>
+    </div>
+
+    <!--  相关推荐  -->
+    <div class="main-wrapper w960" id="relate">
+        <a class="title" href="#">根据购物车中的商品为您推荐
+        </a>
+        <div class="indi" id="indi" >
+        </div>
+        <div class="rela-list">
+            <div class="rela-box" id="box">
+            </div>
+            <div class="arrow">
+                <a href="javascript:void(0)" id="prev_page" ><img src="images/anniu.png"></a>
+                <a class="arrow-right" href="javascript:void(0)" id="next_page" ><img src="images/anniu2.png"></a>
+            </div>
+        </div>
+    </div>
+    <!-- 推广商品 -->
+    <div class="main-wrapper w960" id="show">
+        <a class="title" href="#">推广商品</a>
+        <div class="indi" id="indi" >
+        </div>
+        <div class="show-list">
+            <ul class="show-box" id="box">
+            </ul>
+            <div class="arrow">
+                <a href="javascript:void(0)" id="prev_page" ><img src="images/anniu.png"></a>
+                <a class="arrow-right" href="javascript:void(0)" id="next_page" ><img src="images/anniu2.png"></a>
+            </div>
+        </div>
+        <img class="ad-tip" src="images/box14bg03.png" alt="ad">
+    </div>
+    <!-- 脚部 -->
+    <div class="footer-wrapper">
+        <div class="footer w960">
+            <img src="images/footer.png" alt="footer">
+        </div>
+    </div>
+    <!-- js引入 -->
+    <script src="app.js"></script>
+    <script src="js/basket.js"></script>
 </body>
 </html>

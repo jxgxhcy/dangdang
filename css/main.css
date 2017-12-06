@@ -1,0 +1,314 @@
+/* 基础样式 */
+body{
+    font-family: "Microsoft Yahei",'Hiragino Sans GB',"Simsun","Arial";
+    font-size: 12px;
+    color: #969696;
+    word-break: break-all;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+ul,li,p{
+    padding: 0;
+    margin: 0;
+}
+
+a:link,
+a:visited{
+    text-decoration: none;
+    color: #323232;
+}
+
+a:hover{
+    text-decoration: underline;
+    color: red;
+}
+
+a.btn{
+    width: 60px;
+    line-height: 20px;
+    display: inline-block;
+    background: red;
+    border-radius: 2px;
+    color: #fff;
+    text-align: center;
+    margin-left: 5px;
+}
+a.btn:hover{
+    background: #d21f2b;
+}
+a.btn-large{
+    display: inline-block;
+    width: 110px;
+    line-height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    background: red;
+    text-align: center;
+    color: #fff5f5;
+    border-radius: 2px;
+    vertical-align: middle;
+    margin: 5px 15px;
+}
+a.btn-large:hover{
+    text-decoration: none;
+}
+
+a.check-now{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #bcbcbc;
+    background-color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    margin: 0 5px;
+    vertical-align: text-bottom;
+}
+a.check-now:hover{
+    border-color: red;
+}
+
+a.check-on,
+a.check-on:hover{
+    border-color: red;
+    background: red url(../images/icon_sprite.png) no-repeat -65px -1px;
+
+}
+
+.w960{
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* 页面主要样式 */
+.header-wrapper{
+    background: #f9f9f9;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.header{
+    position: relative;
+    height: 34px;
+    line-height: 34px;
+    font-family: 'Hiragino Sans GB',"simsun","Arial";
+}
+
+.nav{
+    position: absolute;
+    right: 0;
+}
+
+.banner{
+    padding-top: 17px;
+    height: 50px;
+}
+
+.logo-wrapper{
+    height: 100px;
+    border-bottom: 4px solid #f00;
+}
+.logo{
+    position: relative;
+    height: 49px;
+    padding-top: 20px;
+}
+
+.step{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.adr-wrapper{
+    background: #fafafa;
+}
+.adr{
+    margin: 15px 0;
+}
+.login-tip{
+    height: 34px;
+    line-height: 34px;
+    background: #fff5f5;
+    color: #323232;
+    border: 1px solid #ffecec;
+    margin: 10px auto;
+}
+.icon{
+    height: 17px;
+    width: 17px;
+    display: inline-block;
+    background: url(../images/icon_20150706.png) no-repeat 0 -60px;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.total-wrapper{
+    margin: 20px auto;
+    background: url(../images/shopping_total.png) no-repeat center;
+}
+.total{
+    height: 72px;
+    position: relative;
+    line-height: 60px;
+}
+.total-left{
+    width: 430px;
+    height: 60px;
+}
+.total-right{
+    position: absolute;
+    width: 520px;
+    top: 12px;
+    right: 0;
+    height: 60px;
+    text-align: right;
+}
+.main-wrapper{
+    position: relative;
+    border: 1px solid #dcdcdc;
+    margin-bottom: 25px;
+    padding: 10px 0 15px;
+}
+.title{
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 36px;
+    margin-left: 25px;
+}
+.indi{
+    display: inline-block;
+    position: absolute;
+    right: 50px;
+    line-height: 36px;
+    height: 36px;
+}
+.indi .opt{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid red;
+    border-radius: 10px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.rela-list,
+.show-list{
+    padding: 5px;
+    width: 950px;
+    overflow: hidden;
+    position: relative;
+}
+.show-list{
+    height: 280px;
+}
+.rela-list{
+    height: 540px;
+}
+.show-box,
+.rela-box{
+    position: absolute;
+    left:0;
+    width: 10000px;
+    transition: left 1.2s;
+}
+.page{
+    width: 960px;
+    height: 540px;
+    display: inline-block;
+}
+
+.arrow{
+    position: absolute;
+    width: 960px;
+    height: 0;
+    top: 50%;
+    margin:-34px 0 0 -5px;
+    background: chartreuse;
+}
+#prev_page:hover,
+#next_page:hover{
+    box-shadow: 0 0 5px grey;
+}
+.arrow-right{
+    position: absolute;
+    right: 0;
+}
+.rela-box li,
+.show-box li{
+    width: 150px;
+    text-align: center;
+    padding: 15px 10px;
+    float: left;
+    margin: 0 11px;
+    line-height: 16px;
+    position: relative;
+    overflow: hidden;
+}
+.rela-box li:hover,
+.show-box li:hover{
+    background: #efefef;
+}
+.show-box li:hover p:last-child{
+    display: block;
+}
+.rela-box li p,
+.show-box li p{
+    text-align: left;
+}
+.show-box li p:last-child{
+    display: none;
+}
+.rela-box li a img,
+.show-box li a img{
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+.price{
+    font-size: 16px;
+    line-height: 32px;
+    color: red;
+}
+.add-basket{
+    position: absolute;
+    top:135px;
+    background: #ff5e5e;
+    color: white;
+    cursor: pointer;
+    width: 148px;
+    line-height: 30px;
+    display: none;
+    opacity: 0.85;
+}
+.rela-box li:hover p:nth-of-type(4){
+    display: block;
+}
+
+.ad-tip{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.footer-wrapper{
+    margin-top: 10px;
+    padding: 15px 0;
+    border-top: 4px solid #f00;
+}
+
+.footer{
+    text-align: center;
+}
+
+
+
+
+
