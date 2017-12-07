@@ -225,7 +225,7 @@
                     td3.innerHTML = price;
                     var td4 = tr.insertCell(4);
                     td4.className = 'w150 tc';
-                    td4.innerHTML = '<span onclick="decrease(this)">-</span><input type="text" value="1" onblur="change(this)" oninput="change(this)"><span onclick="increase(this)">+</span>';
+                    td4.innerHTML = '<span onclick="decrease(this)">-</span><input type="text" value="1" oninput="change(this)" onpropertychange="change(this)"><span onclick="increase(this)">+</span>';
                     var td5 = tr.insertCell(5);
                     td5.className = 'w100 tc cf00';
                     td5.innerHTML = price;
@@ -235,7 +235,6 @@
                     shopTotal();
                     selectOne(td0.firstElementChild);
                 }
-
 
                 break;
             case 1:
