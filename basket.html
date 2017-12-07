@@ -20,13 +20,13 @@
         <div class="header w960 tdn">
             &nbsp;&nbsp;欢迎光临当当，请<a href="#lg" style="color: #ff0000">登录</a> <a href="#re">成为会员</a>
             <div class="nav dib">
-                <a class="dib" href="#">购物车</a>
-                <a class="dib" href="#">我的订单</a>
-                <a class="dib" href="#">我的云书房</a>
-                <a class="dib" href="#">我的当当</a>
-                <a class="dib" href="#">小说投稿</a>
-                <a class="dib" href="#">企业采购</a>
-                <a class="dib" href="#">客户服务</a>
+                <a class="dib mr5" href="#"><span class="icon icon-a"></span>购物车</a>
+                <a class="dib mr5" href="#">我的订单</a>
+                <a class="dib mr5" href="#">我的云书房</a>
+                <a class="dib mr5" href="#"><span class="icon icon-b"></span>手机当当</a>
+                <a class="dib mr5" href="#">小说投稿<span class="icon icon-c"></span></a>
+                <a class="dib mr5" href="#">企业采购<span class="icon icon-c"></span></a>
+                <a class="dib mr5" href="#">客户服务<span class="icon icon-c"></span></a>
             </div>
         </div>
     </div>
@@ -43,30 +43,67 @@
             <img class="step" src="./images/buzou.png" alt="step">
         </div>
     </div>
-    <div class="adr-wrapper">
-        <div class="w960">
-            <img class="adr" src="./images/peisong.png" alt="配送">
+    <!-- 购物车 -->
+    <div class="empty w960">
+        <div class="empty-tip">
+            <p>您的购物车还是空的，您可以：</p>
+            <p>
+                <a href="#" class="btn-middle" style="">立即登录</a>
+                &nbsp;&nbsp;&nbsp;&nbsp;登录后购物车的商品将保存到您的账号中，或者<a href="#">去逛逛</a>
+            </p>
+
         </div>
     </div>
-    <div class="login-tip w960">
-        <span class="icon"></span>
-        您还没有登录！登录后购物车的商品将保存到您的帐号中
-        <a class="btn" href="#">立即登录</a>
-    </div>
-    <!-- 购物车 -->
-    <div class="total-wrapper">
-        <div class="total w960">
-            <div class="total-left">
-                <a class="check-now" href="#"></a>全选
-                <a class="ml15" href="#">批量删除</a>
-                <span class="ml50">已选择<span id="select-count" class="cf00">3</span>件商品</span>
+    <div id="basket">
+        <div class="adr-wrapper">
+            <div class="w960">
+                <img class="adr" src="./images/peisong.png" alt="配送">
             </div>
-            <div class="total-right">
-                <div class="dib lh24 vm">
-                    <span class="w150 dib">总计(不含运费):</span><span class="w50 dib cf00">¥0.00</span><br/>
-                    <span class="w150 dib">已节省:</span><span class="w50 dib cf00">¥0.00</span>
+        </div>
+        <div class="login-tip w960">
+            <span class="icon warn-icon"></span>
+            您还没有登录！登录后购物车的商品将保存到您的帐号中
+            <a class="btn" href="#">立即登录</a>
+        </div>
+        <div id="basket-title" class="w960">
+            <table>
+                <tr>
+                    <td class="w200 lh30"><input type="checkbox" id="checkAll" onchange="selectAll(this)"><label for="checkAll">全选</label></td>
+                    <td class="w280 lh30">商品信息</td>
+                    <td class="w100 lh30 tc">单价（元）</td>
+                    <td class="w150 lh30 tc">数量</td>
+                    <td class="w100 lh30 tc">金额（元）</td>
+                    <td class="w100 lh30 tc">操作</td>
+                </tr>
+            </table>
+        </div>
+        <table id="basket-list" class="w960">
+            <caption>&nbsp;<input type="checkbox" id="self_id" onchange="shopCheck(this)"><span class="icon shop-icon"></span>当当自营</caption>
+            <tbody class="bddc">
+            </tbody>
+            <tfoot class="bddc">
+                <tr>
+                    <td colspan="7">
+                        <span>店铺合计：</span>
+                        <span class="shop-total">¥144.00</span>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+        <div class="total-wrapper">
+            <div class="total w960">
+                <div class="total-left">
+                    <input type="checkbox" id="selectAll" onchange="selectAll(this)"><label for="selectAll">全选</label>
+                    <a class="ml15" href="javascript:deleteMore(this)">批量删除</a>
+                    <span class="ml50">已选择<span id="select-count" class="cf00">3</span>件商品</span>
                 </div>
-                <a class="btn-large" href="#">结算</a>
+                <div class="total-right">
+                    <div class="dib lh24 vm">
+                        <span class="w150 dib">总计(不含运费):</span><span id="total-all" class="w100 dib cf00">¥0.00</span><br/>
+                        <span class="w150 dib">已节省:</span><span class="w100 dib cf00">¥0.00</span>
+                    </div>
+                    <a class="btn-large" href="#">结算</a>
+                </div>
             </div>
         </div>
     </div>
@@ -107,6 +144,7 @@
             <img src="images/footer.png" alt="footer">
         </div>
     </div>
+
     <!-- js引入 -->
     <script src="app.js"></script>
     <script src="js/basket.js"></script>

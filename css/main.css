@@ -10,9 +10,44 @@ body{
     border: 0;
     outline: 0;
 }
-ul,li,p{
+ul,li,p,img,td,input{
     padding: 0;
     margin: 0;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+td img{
+   vertical-align: middle;
+    cursor: pointer;
+}
+
+input{
+    vertical-align: middle;
+}
+
+table caption,
+table tfoot{
+    font-weight: bold;
+    text-align: left;
+    color: #323232;
+}
+
+table caption{
+    padding: 10px 0;
+    line-height: 24px;
+}
+
+table tfoot span{
+    margin:50px;
+    line-height: 50px;
+}
+.shop-total{
+    margin-left: 500px;
+    color: #ff0000;
+    font-size: 16px;
 }
 
 a:link,
@@ -25,10 +60,9 @@ a:hover{
     text-decoration: underline;
     color: red;
 }
-
+a.btn-middle,
 a.btn{
-    width: 60px;
-    line-height: 20px;
+
     display: inline-block;
     background: red;
     border-radius: 2px;
@@ -36,6 +70,19 @@ a.btn{
     text-align: center;
     margin-left: 5px;
 }
+
+a.btn{
+    width: 60px;
+    line-height: 20px;
+}
+
+a.btn-middle{
+    width: 110px;
+    line-height: 40px;
+    font-size: 18px;
+}
+
+a.btn-middle:hover,
 a.btn:hover{
     background: #d21f2b;
 }
@@ -80,6 +127,7 @@ a.check-on:hover{
     background: red url(../images/icon_sprite.png) no-repeat -65px -1px;
 
 }
+
 
 .w960{
     width: 960px;
@@ -127,6 +175,53 @@ a.check-on:hover{
     bottom: 0;
 }
 
+.empty{
+    position: relative;
+    height: 280px;
+    background: #fff url(../images/empty.png) no-repeat 50px center;
+}
+
+.empty p{
+    margin: 15px 0;
+}
+
+.empty-tip{
+    width: 500px;
+    height: 150px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+#basket-list tbody,
+#basket-list tfoot{
+    background: #fafafa;
+}
+#basket-list tbody td{
+    padding: 10px 0;
+}
+#basket-list tbody span{
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    display: inline-block;
+    border: 1px solid #dcdcdc;
+    cursor: pointer;
+    font-size: 22px;
+}
+#basket-list tbody span:hover{
+    background: #fff5f5;
+    color: #ff0000;
+}
+
+#basket-list input[type=text]{
+    width: 28px;
+    height: 28px;
+    font-weight: bold;
+    border: 1px solid #dcdcdc;
+    vertical-align: bottom;
+    text-align: center;
+}
+
 .adr-wrapper{
     background: #fafafa;
 }
@@ -142,12 +237,28 @@ a.check-on:hover{
     margin: 10px auto;
 }
 .icon{
-    height: 17px;
-    width: 17px;
+    height: 18px;
+    width: 18px;
     display: inline-block;
-    background: url(../images/icon_20150706.png) no-repeat 0 -60px;
     vertical-align: middle;
-    margin-left: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.icon-a{
+    background: url(../images/car.gif) no-repeat 0 0;
+}
+.icon-b{
+    background: url(../images/phone.png) no-repeat 5px -1px;
+}
+.icon-c{
+    background: url(../images/icon_sprite.png) no-repeat -65px -94px;
+}
+
+.warn-icon{
+    background: url(../images/icon_20150706.png) no-repeat 0 -60px;
+}
+.shop-icon{
+    background: url(../images/icon_sprite.png) no-repeat 0 -30px;
 }
 
 .total-wrapper{
