@@ -295,6 +295,7 @@
         for(var i=0;i<rows.length;i++){
             rows[i].cells[0].firstElementChild.checked = ele.checked;
         }
+        totalAll();
     }
 
     /**
@@ -384,6 +385,9 @@
         }
         totalCount.innerHTML =scount;
         tota_all.innerHTML = '¥' + count + '.00';
+        tota_all.parentNode.nextElementSibling.disabled = count==0?true:false;
+        tota_all.parentNode.nextElementSibling.style.backgroundColor = count==0?'#dedede':'#ff0000';
+
     }
 
     function change(ele) {

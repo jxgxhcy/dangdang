@@ -55,6 +55,9 @@ a:visited{
     text-decoration: none;
     color: #323232;
 }
+a:disabled{
+    background: grey;
+}
 
 a:hover{
     text-decoration: underline;
